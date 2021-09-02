@@ -7,4 +7,14 @@
     <color name="teal_700">#FF018786</color>
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
+
+    <color name="flat_awesome_green_1">#1abc9c</color>
+    <color name="flat_awesome_green_2">#16a085</color>
+    <color name="flat_green_1">#2ecc71</color>
+    <color name="flat_green_2">#27ae60</color>
+    <color name="flat_grey_dark_1">#34495e</color>
+    <color name="flat_grey_dark_2">#2c3e50</color>
+
+    <color name="flat_pink_1">#9b59b6</color>
+    <color name="flat_pink_2">#8e44ad</color>
 </resources>

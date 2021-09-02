@@ -1,20 +1,114 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout
+<ScrollView
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical"
+    android:scrollbars="none"
+    android:background="#ecf0f1"
     tools:context=".MainActivity">
 
-    <org.imaginativeworld.whynotimagecarousel.ImageCarousel
-        android:id="@+id/carousel"
+    <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="300dp"
-        app:carouselGravity="CENTER"
-        app:showIndicator="true"
-        app:indicatorMargin="0dp"
-        />
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
 
-</LinearLayout>
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="32dp"
+            android:text="Carousel"
+            android:textAlignment="center"
+            android:textColor="#555"
+            android:textSize="24sp"
+            android:textStyle="bold" />
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:layout_marginBottom="8dp">
+
+            <com.google.android.material.card.MaterialCardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="24dp"
+                android:layout_marginTop="0dp"
+                android:layout_marginEnd="24dp"
+                android:layout_marginBottom="16dp"
+                app:cardBackgroundColor="@color/white"
+                app:cardCornerRadius="8dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:paddingTop="8dp">
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="150dp" />
+
+                    <me.relex.circleindicator.CircleIndicator2
+                        android:id="@+id/custom_indicator"
+                        android:layout_width="match_parent"
+                        android:layout_height="32dp"
+                        app:ci_animator="@animator/scale_with_alpha"
+                        app:ci_drawable="@drawable/dot"
+                        app:ci_drawable_unselected="@drawable/dot" />
+
+                    <Button
+                        android:id="@+id/buttonID"
+                        android:layout_width="match_parent"
+                        android:layout_height="32dp"
+                        android:layout_margin="8dp"
+                        android:insetTop="0dp"
+                        android:insetBottom="0dp"
+                        android:text="Ingresar"
+                        android:textColor="@color/white"
+                        app:backgroundTint="@color/flat_pink_1"
+                        app:cornerRadius="16dp" />
+                    <!--
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@color/flat_pink_1"
+                        android:paddingStart="8dp"
+                        android:paddingTop="8dp"
+                        android:paddingEnd="8dp"
+                        android:paddingBottom="8dp"
+                        android:text="@string/information"
+                        android:textColor="@color/white"
+                        android:textSize="14sp" />
+                        -->
+                </LinearLayout>
+
+            </com.google.android.material.card.MaterialCardView>
+
+            <org.imaginativeworld.whynotimagecarousel.ImageCarousel
+                android:id="@+id/carousel"
+                android:layout_width="match_parent"
+                android:layout_height="150dp"
+                android:layout_marginTop="16dp"
+                android:translationZ="8dp"
+                app:autoPlay="true"
+                app:autoPlayDelay="4000"
+                app:carouselGravity="CENTER"
+                app:carouselPaddingBottom="8dp"
+                app:carouselPaddingTop="8dp"
+                app:carouselType="SHOWCASE"
+                app:imageScaleType="centerCrop"
+                app:scaleOnScroll="true"
+                app:scalingFactor=".25"
+                app:showBottomShadow="false"
+                app:showCaption="false"
+                app:showIndicator="false"
+                app:showNavigationButtons="false"
+                app:showTopShadow="false"
+
+                app:carouselPaddingEnd="50dp"
+                app:carouselPaddingStart="50dp"/>
+        </FrameLayout>
+    </LinearLayout>
+</ScrollView>
